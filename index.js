@@ -5,16 +5,20 @@ const app = express();
 
 const usuarios = [
   { nome: "Ana", cidade: "São Paulo" },
-  { nome: "Bruno", cidade: "Rio de Janeiro" },
-  { nome: "Carla", cidade: "Belo Horizonte" },
-  { nome: "Daniel", cidade: "São Paulo" },
-  { nome: "Eduardo", cidade: "Curitiba" },
-  { nome: "Fernanda", cidade: "Rio de Janeiro" },
-  { nome: "Gabriel", cidade: "Porto Alegre" },
-  { nome: "Helena", cidade: "Recife" },
-  { nome: "Igor", cidade: "Fortaleza" },
-  { nome: "Juliana", cidade: "São Paulo" }
+  { nome: "Nicolas", cidade: "Rio de Janeiro" },
+  { nome: "China", cidade: "Belo Horizonte" },
+  { nome: "Jeffin", cidade: "São Paulo" },
+  { nome: "Jhon", cidade: "Curitiba" },
+  { nome: "Hivina", cidade: "Rio de Janeiro" },
+  { nome: "Rudha", cidade: "Porto Alegre" },
+  { nome: "Breno", cidade: "Recife" },
+  { nome: "Alex", cidade: "Fortaleza" },
+  { nome: "Natalia", cidade: "São Paulo" }
 ];
+
+app.get('/', (req, res) => {
+  res.send('API de Usuários Web 2. Use /usuario/todos para listar todos os usuários, /usuario/cidade/<cidade> pára filtrar por cidade ou /usuario/sorteado para retornar um usuário aleatório!');
+});
 
 app.get('/usuario/todos', (req, res) => {
   res.json(usuarios);

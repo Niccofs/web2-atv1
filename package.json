@@ -1,16 +1,25 @@
 {
   "name": "atv-1",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "api/index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node api/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "express": "^5.1.0",
     "serverless-http": "^3.2.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Niccofs/web2-atv1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Niccofs/web2-atv1/issues"
+  },
+  "homepage": "https://github.com/Niccofs/web2-atv1#readme",
+  "description": ""
 }

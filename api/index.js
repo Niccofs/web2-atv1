@@ -1,5 +1,5 @@
 const express = require('express');
-const serverless = require('serverless-http/serverless-http'); // Wrapper para rodar no Vercel
+const serverless = require('serverless-http');
 const app = express();
 
 const usuarios = [

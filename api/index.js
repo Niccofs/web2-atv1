@@ -1,6 +1,5 @@
 const express = require('express');
-const serverless = require('serverless-http'); // Wrapper para rodar no Vercel
-const port = 3000;
+const serverless = require('serverless-http/serverless-http'); // Wrapper para rodar no Vercel
 const app = express();
 
 const usuarios = [
@@ -35,9 +34,5 @@ app.get('/usuario/sorteado', (req, res) => {
   res.json(sorteado);
 });
 
-// app.listen(port, () => {
-//   console.log(`API rodando em http://localhost:${port}`);
-// });
-
 module.exports = app;
-module.exports.handler = serverless(app); // importante!
+module.exports.handler = serverless(app); 
